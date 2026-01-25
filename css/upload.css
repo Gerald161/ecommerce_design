@@ -105,6 +105,7 @@ main{
   border: solid 1px #b6bbc4;
   width: 100%;
   border-radius: 10px;
+  padding-bottom: 35px;
 }
 
 #step_3{
@@ -241,6 +242,62 @@ main{
   color: white;
 }
 
+.variant_desc_container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.variant_desc_container .text_and_icon{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.variant_desc_container .text_and_icon h3{
+  font-weight: normal;
+}
+
+#add_button{
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: solid 1px #2563EB;
+  cursor: pointer;
+}
+
+#add_button p, #add_button svg{
+  color: #2563EB;
+}
+
+#second_summary{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.variant_text_and_icon{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.variant_text_and_icon svg{
+  color: red;
+  cursor: pointer;
+}
+
+.second_page_container_input_label{
+  width: 100%;
+}
+
+.color_container{
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  border: solid 2px #b6bbc4;
+}
+
 @media (prefers-color-scheme: dark){
   .num{
     background-color: #1e3a8a;
@@ -318,5 +375,13 @@ main{
 
   .media_upload_container svg{
     color: white;
+  }
+
+  .variant_desc_container .text_and_icon svg{
+    color: white;
+  }
+
+  .color_container{
+    border: solid 2px white;
   }
 }
