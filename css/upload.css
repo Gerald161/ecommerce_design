@@ -4,163 +4,159 @@ main{
   align-items: center;
 }
 
-main form{
-  padding: 20px 40px;
+.upload_step_container{
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.step_num, .step_num_incomplete{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.step_num p{
+  color: #2563eb;
+}
+
+.num{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: #2563eb;
+  color: white;
+}
+
+.step_num_incomplete .num{
+  border:#d1d5db solid 2px;
+  color: #9ca3af;
+  background-color: transparent;
+}
+
+.step_num_incomplete p{
+  color: #9ca3af;
+}
+
+.step_dash{
+  padding: 2px;
+  border-radius: 5px;
+  width: 100px;
+  background-color: #d1d5db;
+}
+
+.upload_form{
+  border: solid 1px #e5e7eb;
+  border-radius: 10px;
+  padding: 10px 15px;
+  background-color: #eaeaea;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  max-width: 500px;
+  gap: 25px;
+  padding-bottom: 40px;
+  min-width: 60%;
+  margin-bottom: 20px;
+}
+
+.step_1_container{
+  border-radius: 30px;
+  padding: 10px 15px;
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background-color: #dbeafe;
+}
+
+.step_1_container p{
+  color: #1e40af;
+}
+
+.step_1_container svg{
+  height: 22px;
+  width: 22px;
+  color: #1e40af;
 }
 
 .label_plus_input{
-  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 70%;
+}
+
+.label_plus_icon{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.label_plus_icon p{
+  font-size: 0.9em;
+}
+
+.label_plus_icon svg{
+  width: 18px;
+  height: 18px;
 }
 
 .label_plus_input input{
   width: 100%;
 }
 
-.label_plus_input label{
-  cursor: pointer;
-  font-size: 5em;
-  font-family: "Monserrat", sans-serif;
-  transition: all 0.5s;
-  align-self: center;
-}
-
-.label_plus_input select{
-  width: 100%;
-  padding: 10px;
-  font-size: 1em;
-  border: 2px solid #ccc;
-  border-radius: 6px;
-  background-color: #f9f9f9;
-  color: #333;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.label_plus_input select:hover{
-  border-color: #007bff;
-  background-color: #eef7ff;
-}
-
-.label_plus_input select:focus {
-  outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
-}
-
-.label_plus_input input[type='file']{
-	display: none;
-  pointer-events: none;
-}
-
-main form .selected_images_container{
-  width: 100%;
-  display: grid;
+.labels_flex{
+  /* 70% same for the label_plus_input */
+  width: 70%;
+  display: flex;
   gap: 10px;
-  row-gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  grid-auto-rows: 110px;
-  grid-auto-flow: dense;
 }
 
-main form .selected_images_container .selected_image{
-  position: relative;
-  transition: all 0.8s;
+.labels_flex .label_plus_input{
+  flex: 1;
 }
 
-main form .selected_images_container .selected_image img{
-  position: absolute;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-}
-
-main form .selected_images_container .selected_image i{
-  position: absolute;
-  right: -8px;
-  top: -12px;
-  font-size: 1em;
-  padding: 10px;
-  border-radius: 100%;
-  background: rgba(0,0,0,0.5);
-  color: white;
-}
-
-form button{
-  cursor: pointer;
-  padding: 10px 20px;
-  max-width: fit-content;
-  border: none;
-  background-color: dodgerblue;
-  color: white;
-  transition: background-color 0.5s;
-  pointer-events: initial;
-  align-self: center;
-}
-
-form button:hover{
-	background-color: orangered;
-}
-
-.note_text{
-  color: orangered;
-}
-
-.video_container{
-  display: block;
-  position: relative;
-  width: 500px;
-  height: 500px;
-}
-
-.video_container video{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.inactive_vid{
-  display: none;
-}
-
-@media(prefers-color-scheme: dark){
-  main form .selected_images_container .selected_image i{
-    background: rgba(255,255,255,0.3);
+@media (prefers-color-scheme: dark){
+  .num{
+    background-color: #1e3a8a;
   }
 
-  .label_plus_input select{
-    background-color: #1e1e1e;
-    color: #f0f0f0;
-    border: 2px solid #444;
+  .step_dash{
+    background-color: #4b5563;
   }
 
-  .label_plus_input select:hover{
-    border-color: #66b2ff;
-    background-color: #2a2a2a;
+  .step_num_incomplete .num{
+    border:#4b5563 solid 2px;
+    color: #4b5563;
   }
 
-  .label_plus_input select:focus {
-    border-color: #66b2ff;
-    box-shadow: 0 0 4px rgba(102, 178, 255, 0.5);
+  .step_num_incomplete p{
+    color: #4b5563;
   }
 
-  .note_text{
-    color: #FF4500;
+  .upload_form{
+    border: solid 1px #222222;
+    background-color: #1a1a1a;
   }
-}
 
-@media(max-width: 400px){
-  .video_container{
-    width: 300px;
-    height: 300px;
+  .step_1_container{
+    background-color: #1e3a8a;
+  }
+
+  .step_1_container p{
+    color: #bfdbfe;
+  }
+
+  .step_1_container svg{
+    color: #bfdbfe;
+  }
+
+  .label_plus_icon svg{
+    color: white;
   }
 }
