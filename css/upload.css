@@ -111,7 +111,6 @@ main{
 }
 
 .labels_flex{
-  /* 70% same for the label_plus_input */
   width: 70%;
   display: flex;
   gap: 10px;
@@ -119,6 +118,27 @@ main{
 
 .labels_flex .label_plus_input{
   flex: 1;
+}
+
+.horizontal_label_input{
+  width: 100%;
+  flex-direction: row;
+  gap: unset;
+}
+
+.horizontal_label_input .label_plus_icon{
+  flex: 1;
+  cursor: pointer;
+}
+
+.horizontal_label_input input{
+  width: initial;
+  cursor: pointer;
+}
+
+.variant_text{
+  font-size: 0.8em;
+  color: #4b5563;
 }
 
 @media (prefers-color-scheme: dark){
@@ -158,5 +178,9 @@ main{
 
   .label_plus_icon svg{
     color: white;
+  }
+
+  .variant_text{
+    color: #9ca3af;
   }
 }
