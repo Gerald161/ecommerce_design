@@ -50,8 +50,12 @@ main{
   background-color: #d1d5db;
 }
 
+#complete_dash{
+  background-color: #2563eb;
+}
+
 .upload_form{
-  border: solid 1px #e5e7eb;
+  border: solid 1px #b6bbc4;
   border-radius: 10px;
   padding: 10px 15px;
   background-color: #eaeaea;
@@ -64,7 +68,7 @@ main{
   margin-bottom: 20px;
 }
 
-.step_1_container{
+.step_container{
   border-radius: 30px;
   padding: 10px 15px;
   margin: 20px 0;
@@ -74,14 +78,55 @@ main{
   background-color: #dbeafe;
 }
 
-.step_1_container p{
+.step_container p{
   color: #1e40af;
 }
 
-.step_1_container svg{
+.step_container svg{
   height: 22px;
   width: 22px;
   color: #1e40af;
+}
+
+#step_2{
+  background-color: #dcfce7;
+}
+
+#step_2 p{
+  color: #166534;
+}
+
+#step_2 svg{
+  color: #166534;
+}
+
+.product_summary_container{
+  padding: 20px;
+  border: solid 1px #b6bbc4;
+  width: 100%;
+  border-radius: 10px;
+}
+
+#step_3{
+  justify-content: center;
+}
+
+#step_3, #step_3 svg, #step_3 p{
+  color: black;
+  margin: 0;
+  background-color: transparent;
+}
+
+.summary_details{
+  margin-top: 20px;
+  display: flex;
+}
+
+.summary_details div{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .label_plus_input{
@@ -141,8 +186,67 @@ main{
   color: #4b5563;
 }
 
+.next_media_container{
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background-color: #2563EB;
+}
+
+.next_media_container p, .next_media_container svg{
+  color: white;
+}
+
+.media_upload_container{
+  padding: 20px;
+  border: dashed 3px #b6bbc4;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.media_upload_container svg{
+  height: 50px;
+  width: 50px;
+}
+
+.upload_nav_container{
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.upload_nav_container .nav_button{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 2px #b6bbc4;
+  border-radius: 10px;
+  padding: 15px 10px;
+  gap: 10px;
+}
+
+#publish{
+  border: none;
+  background-color: #16a34a;
+  color: white;
+}
+
 @media (prefers-color-scheme: dark){
   .num{
+    background-color: #1e3a8a;
+  }
+
+  #complete_dash{
     background-color: #1e3a8a;
   }
 
@@ -164,16 +268,32 @@ main{
     background-color: #1a1a1a;
   }
 
-  .step_1_container{
+  .step_container{
     background-color: #1e3a8a;
   }
 
-  .step_1_container p{
+  .step_container p{
     color: #bfdbfe;
   }
 
-  .step_1_container svg{
+  .step_container svg{
     color: #bfdbfe;
+  }
+
+  #step_2{
+    background-color: #14532d;
+  }
+
+  #step_2 p{
+    color: #bbf7d0;
+  }
+
+  #step_2 svg{
+    color: #bbf7d0;
+  }
+
+  #step_3, #step_3 svg, #step_3 p{
+    color: white;
   }
 
   .label_plus_icon svg{
@@ -182,5 +302,21 @@ main{
 
   .variant_text{
     color: #9ca3af;
+  }
+
+  .upload_nav_container .nav_button{
+    border: solid 1px #3a3a3a;
+  }
+
+  .product_summary_container{
+    border: solid 1px #3a3a3a;
+  }
+
+  .media_upload_container{
+    border: dashed 3px #3a3a3a;
+  }
+
+  .media_upload_container svg{
+    color: white;
   }
 }

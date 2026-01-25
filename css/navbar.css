@@ -266,11 +266,6 @@ header form .search_suggestions{
     display: none;
 }
 
-input[type='file']{
-    display: none;
-    pointer-events: none;
-}
-
 .fa-xmark:hover, .camera_upload:hover{
     background-color: rgba(0,0,0,0.1);
 }

@@ -29,6 +29,11 @@ input{
     border-radius: 4px;
 }
 
+input[type='file']{
+    display: none;
+    pointer-events: none;
+}
+
 textarea{
   outline: none;
   padding: 10px;
