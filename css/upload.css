@@ -387,6 +387,32 @@ main{
   color: rgba(245, 158, 11, 1);
 }
 
+.video_container{
+  position: relative;
+  width: 100%;
+  height: 350px;
+}
+
+.video_container video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.remove_video{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 15px 10px;
+  gap: 10px;
+  background-color: #dc2626;
+  color: white; 
+  cursor: pointer;
+}
+
 @media (prefers-color-scheme: dark){
   .num{
     background-color: #1e3a8a;
