@@ -195,6 +195,8 @@ main{
   gap: 10px;
   align-items: center;
   background-color: #2563EB;
+  width: 70%;
+  justify-content: center;
 }
 
 .next_media_container p, .next_media_container svg{
@@ -400,7 +402,7 @@ main{
   border-radius: 10px;
 }
 
-.remove_video{
+.remove_stuff{
   width: 100%;
   display: flex;
   align-items: center;
@@ -411,6 +413,10 @@ main{
   background-color: #dc2626;
   color: white; 
   cursor: pointer;
+}
+
+#delete_product{
+  width: 70%;
 }
 
 @media (prefers-color-scheme: dark){
